@@ -32,7 +32,11 @@ rtmClient.on(RTM_EVENTS.MESSAGE, (message) => {
     // rtmClient.sendMessage(text, channel)
     console.log(message)
 
+    // clean the message
+
+    // extract the text part
     let messageDirty = message.text;
+    // make all lowercase
     let messageClean = messageDirty.toLowerCase();
 
 
@@ -46,6 +50,19 @@ rtmClient.on(RTM_EVENTS.MESSAGE, (message) => {
         list.push(msgObj)
         rtmClient.sendMessage('"' +messageClean.substring(4) + '"' + ' added to list!', 'C5E58C28J')
     }
+
+    if (messageClean.substring(0,1) === '+') {
+      // same thing as "add" but with the + sign
+      let msgObj = {
+          user: message.user,
+          text: messageClean.substring(2)
+      };
+      list.push(msgObj)
+      rtmClient.sendMessage('"' +messageClean.substring(2) + '"' + ' added to list!', 'C5E58C28J')
+
+    }
+
+
     if (messageClean === 'show list') {
         let count = 0;
         for (var i = 0; i < list.length; i++) {
@@ -85,7 +102,7 @@ rtmClient.on(RTM_EVENTS.MESSAGE, (message) => {
 
     if (messageClean === 'help') {
         rtmClient.sendMessage(
-            'Im your personal todo-list bot! Keep everything organized with me!\nList of commmands: ```\n * add <your kebab> \n * show list \n * clear list \n * help ```', 'C5E58C28J')
+            'Im your personal todo-list bot! Keep everything organized with me!\nList of commmands: ```\n * add <item to add> \n * + <item to add> \n * show list \n * clear list \n * help ```', 'C5E58C28J')
     }
 
 })
