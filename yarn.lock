@@ -2,23 +2,6 @@
 # yarn lockfile v1
 
 
-"@slack/client@^3.9.0":
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/@slack/client/-/client-3.9.0.tgz#bb1a89e93dcb461e44ef81527d1092a73631b66b"
-  dependencies:
-    async "^1.5.0"
-    bluebird "^3.3.3"
-    eventemitter3 "^1.1.1"
-    https-proxy-agent "^1.0.0"
-    inherits "^2.0.1"
-    lodash "^4.13.1"
-    pkginfo "^0.4.0"
-    request "^2.64.0"
-    retry "^0.9.0"
-    url-join "0.0.1"
-    winston "^2.1.1"
-    ws "^1.0.1"
-
 JSONStream@^1.0.3:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/JSONStream/-/JSONStream-1.3.1.tgz#707f761e01dae9e16f1bcf93703b78c70966579a"
@@ -187,10 +170,6 @@ block-stream@*:
   resolved "https://registry.yarnpkg.com/block-stream/-/block-stream-0.0.9.tgz#13ebfe778a03205cfe03751481ebb4b3300c126a"
   dependencies:
     inherits "~2.0.0"
-
-bluebird@^3.3.3:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.0.tgz#791420d7f551eea2897453a8a77653f96606d67c"
 
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
   version "4.11.6"
@@ -1330,9 +1309,9 @@ lodash.restparam@^3.0.0:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/lodash.restparam/-/lodash.restparam-3.6.1.tgz#936a4e309ef330a7645ed4145986c85ae5b20805"
 
-lodash@^4.13.1:
-  version "4.17.4"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
+lodash@^3.10.1:
+  version "3.10.1"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
 lowercase-keys@^1.0.0:
   version "1.0.0"
@@ -1657,10 +1636,6 @@ pkg-config@1.1.1:
     find-root "^1.0.0"
     xtend "^4.0.1"
 
-pkginfo@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/pkginfo/-/pkginfo-0.4.0.tgz#349dbb7ffd38081fcadc0853df687f0c7744cd65"
-
 prepend-http@^1.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
@@ -1855,9 +1830,9 @@ resumer@~0.0.0:
   dependencies:
     through "~2.3.4"
 
-retry@^0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/retry/-/retry-0.9.0.tgz#6f697e50a0e4ddc8c8f7fb547a9b60dead43678d"
+retry@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/retry/-/retry-0.8.0.tgz#2367628dc0edb247b1eab649dc53ac8628ac2d5f"
 
 rimraf@2, rimraf@^2.5.1, rimraf@^2.6.1:
   version "2.6.1"
@@ -1930,6 +1905,21 @@ shell-quote@^1.6.1:
 signal-exit@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
+
+slack-client@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/slack-client/-/slack-client-2.0.6.tgz#78eb89f7f527620e145ccd7b1d8d16bd670bb383"
+  dependencies:
+    async "^1.5.0"
+    eventemitter3 "^1.1.1"
+    https-proxy-agent "^1.0.0"
+    inherits "^2.0.1"
+    lodash "^3.10.1"
+    request "^2.64.0"
+    retry "^0.8.0"
+    url-join "0.0.1"
+    winston "^2.1.1"
+    ws "^1.0.1"
 
 slide@^1.1.5:
   version "1.1.6"
