@@ -82,7 +82,7 @@ rtmClient.on(RTM_EVENTS.MESSAGE, (message) => {
           // text to be printed as a list
           var listText = '';
           for (var i = 0; i < list.length; i++) {
-              if (list[i].user === user) {
+              if (list[i].user === user && list[i].text != "") {
                   // add index number and a colon to make it fancaaay
                   listText += index + ': ' + list[i].text + '\n'
                   index++;
@@ -116,10 +116,11 @@ rtmClient.on(RTM_EVENTS.MESSAGE, (message) => {
             // check if "index" aka count + 1 is the same as the one to remove
             if (Number(count + 1) === toRemove) {
 
+
+              rtmClient.sendMessage('"' + list[i].text+'"' +' removed!', 'C5EUSKTDL');
               // "remove" item, or just make it not show up
               // screw memory!
-              list[i].user = "";
-              rtmClient.sendMessage('Item removed!', 'C5EUSKTDL');
+              list[i].text = "";
               // escape for loop
               break;
             }
